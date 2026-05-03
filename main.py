@@ -1,4 +1,5 @@
 import os
+import json
 import logging
 from datetime import datetime
 from reporter import generate_excel_report
@@ -18,9 +19,12 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 #CONFIGURATION
-KEYWORDS = ["sepatu lari pria", "tws bluetooth"]
-MAX_LOADS = 3
-OUTPUT_DIR = "output"
+with open("config.json", "r") as f:
+    config = json.load(f)
+
+KEYWORDS = config["keywords"]
+MAX_LOADS = config["max_loads"]
+OUTPUT_DIR = config["output_dir"]
 
 def main():
     logger.info("=" * 60)

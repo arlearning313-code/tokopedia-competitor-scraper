@@ -56,14 +56,15 @@ pip install -r requirements.txt
 ```
 
 ### Configuration
+This project uses a config.json file to manage keywords and settings.
+A config.example.json template is provided. Copy and rename it before running the program.
 
-Open `main.py` and edit the configuration section:
-
-```python
-KEYWORDS = ["sepatu lari pria", "tws bluetooth"]  # Keywords to search
-MAX_LOADS = 3       # How many times to click "Load More"
-OUTPUT_DIR = "output"  # Output folder name
+```bash
+cp config.example.json config.json
 ```
+
+Then open config.json and adjust the values as needed.
+Note: config.json is excluded from version control to keep your keywords private.
 
 ### Usage
 
@@ -132,13 +133,15 @@ pip install -r requirements.txt
 
 ### Konfigurasi
 
-Buka `main.py` dan edit bagian konfigurasi:
+Project ini menggunakan file config.json untuk mengatur kata kunci dan pengaturan lainnya.
+Template config.example.json sudah disediakan. Salin dan ubah namanya sebelum menjalankan program.
 
-```python
-KEYWORDS = ["sepatu lari pria", "tws bluetooth"]  # Kata kunci pencarian
-MAX_LOADS = 3        # Berapa kali klik tombol "Muat Lebih Banyak"
-OUTPUT_DIR = "output"   # Nama folder output
+```bash
+cp config.example.json config.json
 ```
+
+Kemudian buka config.json dan sesuaikan nilainya sesuai kebutuhan.
+Catatan: config.json tidak ikut tersimpan di repository agar kata kunci pencarian kamu tetap bersifat pribadi.
 
 ### Cara Penggunaan
 

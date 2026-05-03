@@ -1,0 +1,5 @@
+{
+    "keywords": ["first keyword", "second keyword etc."],
+    "max_loads": 3,
+    "output_dir": "output"
+}
