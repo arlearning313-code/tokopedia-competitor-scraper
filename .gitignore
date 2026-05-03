@@ -1,0 +1,19 @@
+# Virtual environment
+.venv/
+venv/
+
+# Output & log
+output/
+analyzer.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Chrome driver cache
+.wdm/
+
+# IDE
+.vscode/
+.idea/
