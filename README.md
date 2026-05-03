@@ -9,6 +9,17 @@
 ### Overview
 A Python-based tool to scrape product listings from Tokopedia based on keywords, analyze pricing data, and generate a formatted Excel report with charts and segment breakdowns.
 
+### Output Preview
+
+1. Summary Sheet
+![Summary](assets/screenshot_summary.png)
+
+2. Product Data Sheet
+![Product Data](assets/screenshot_data.png)
+
+3. Price Chart
+![Price Chart](assets/screenshot_chart.png)
+
 ### Features
 - Scrapes product data from Tokopedia search results
 - Supports multiple keywords in a single run
@@ -84,6 +95,17 @@ The report will be saved in the `output/` folder as an `.xlsx` file with a times
 
 ### Gambaran Umum
 Tool berbasis Python untuk melakukan scraping listing produk dari Tokopedia berdasarkan kata kunci, menganalisis data harga, dan menghasilkan laporan Excel terformat lengkap dengan grafik dan segmentasi harga.
+
+### Pratinjau Laporan
+
+1. Sheet Rangkuman
+![Summary](assets/screenshot_summary.png)
+
+2. Sheet Data Produk
+![Product Data](assets/screenshot_data.png)
+
+3. Grafik Harga
+![Price Chart](assets/screenshot_chart.png)
 
 ### Fitur
 - Scraping data produk dari hasil pencarian Tokopedia

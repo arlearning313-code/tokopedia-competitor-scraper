@@ -11,9 +11,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
-
-
+from selenium.common.exceptions import TimeoutException
 
 
 logger = logging.getLogger(__name__)
@@ -127,9 +125,14 @@ def parse_tokopedia_page(html: str, keyword: str) -> list[Product]:
                         sold_count = text
 
             #Information
-            shop_spans = content.select("div:last-child span")
-            shop_name = shop_spans[0].get_text(strip=True) if len(shop_spans) > 0 else None
-            shop_location = shop_spans[1].get_text(strip=True) if len(shop_spans) > 1 else None
+            shop_div = content.select_one("div._1yoE8Ml3qwvn-r\\+EZ5hlbA\\=\\=")
+            if shop_div:
+                shop_spans = shop_div.find_all("span")
+                shop_name = shop_spans[0].get_text(strip=True) if len(shop_spans) > 0 else None
+                shop_location = shop_spans[1].get_text(strip=True) if len(shop_spans) > 1 else None
+            else:
+                shop_name = None
+                shop_location = None
 
             product = Product(
                 name=name,
