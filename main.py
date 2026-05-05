@@ -23,7 +23,6 @@ with open("config.json", "r") as f:
     config = json.load(f)
 
 KEYWORDS = config["keywords"]
-MAX_LOADS = config["max_loads"]
 OUTPUT_DIR = config["output_dir"]
 
 def main():
@@ -38,7 +37,7 @@ def main():
     all_products = []
     for keyword in KEYWORDS:
         logger.info(f"\n Scraping keyword: '{keyword}'")
-        products = scrape_tokopedia(keyword, max_loads=MAX_LOADS)
+        products = scrape_tokopedia(keyword)
         all_products.extend(products)
         random_delay(1, 5)
 
